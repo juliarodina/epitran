@@ -13,11 +13,11 @@ import regex as re
 
 import panphon
 import unicodecsv as csv
-from epitran.exceptions import DatafileError, MappingError
-from epitran.ligaturize import ligaturize
-from epitran.ppprocessor import PrePostProcessor
-from epitran.puncnorm import PuncNorm
-from epitran.stripdiacritics import StripDiacritics
+from exceptions import DatafileError, MappingError
+from ligaturize import ligaturize
+from ppprocessor import PrePostProcessor
+from puncnorm import PuncNorm
+from stripdiacritics import StripDiacritics
 
 if sys.version_info[0] == 3:
     def unicode(x):

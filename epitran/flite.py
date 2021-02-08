@@ -13,8 +13,8 @@ import regex as re
 
 import panphon
 import unicodecsv as csv
-from epitran.ligaturize import ligaturize
-from epitran.puncnorm import PuncNorm
+from ligaturize import ligaturize
+from puncnorm import PuncNorm
 
 if os.name == 'posix' and sys.version_info[0] < 3:
     import subprocess32 as subprocess

@@ -8,7 +8,7 @@ import unicodedata
 
 import regex as re
 
-from epitran.exceptions import DatafileError
+from exceptions import DatafileError
 
 logging.basicConfig(level=logging.DEBUG)
 

@@ -6,11 +6,11 @@ import logging
 import sys
 
 import panphon.featuretable
-from epitran.epihan import Epihan, EpihanTraditional
-from epitran.flite import FliteLexLookup
-from epitran.puncnorm import PuncNorm
-from epitran.simple import SimpleEpitran
-from epitran.xsampa import XSampa
+from epihan import Epihan, EpihanTraditional
+from flite import FliteLexLookup
+from puncnorm import PuncNorm
+from simple import SimpleEpitran
+from xsampa import XSampa
 
 if sys.version_info[0] == 3:
     def unicode(x):

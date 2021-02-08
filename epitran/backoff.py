@@ -3,11 +3,11 @@ from __future__ import (print_function, absolute_import,
                         unicode_literals)
 
 import regex as re
-from . import _epitran
+import _epitran
 import panphon.featuretable
-from epitran.puncnorm import PuncNorm
-from epitran.xsampa import XSampa
-from epitran.stripdiacritics import StripDiacritics
+from puncnorm import PuncNorm
+from xsampa import XSampa
+from stripdiacritics import StripDiacritics
 
 
 class Backoff(object):
@@ -60,7 +60,9 @@ class Backoff(object):
                 else:
                     tr_list.append(token[0])
                     token = token[1:]
-        return ''.join(tr_list)
+        tr = ''.join(tr_list)
+        tr = tr.replace('й', 'j')
+        return tr
 
     def trans_list(self, token):
         """Transliterate/transcribe a word into list of IPA phonemes.

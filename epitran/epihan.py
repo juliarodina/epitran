@@ -6,9 +6,9 @@ import os.path
 import pkg_resources
 import regex as re
 
-from . import cedict
-from . import rules
-from epitran.ligaturize import ligaturize
+import cedict
+import rules
+from ligaturize import ligaturize
 
 
 class MissingData(Exception):

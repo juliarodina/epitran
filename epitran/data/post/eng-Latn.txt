@@ -1,0 +1,30 @@
+% consonants = [b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ]
+% vowels = []
+
+% a
+a -> ɛ / ^(b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ){1,2} _ (b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ){1,2}#
+a -> ɛ / _ r
+aaj -> ɛj / _
+ai -> ɛj / _
+ɛaj -> ɛj / _
+
+% e
+ɛɛ -> i / _
+ɛ -> i / ^(b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ){1,2} _ #
+ɛ -> 0 / iɛs _ #
+ɛ -> 0 / aj(b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ){1,2} _ #
+ɛ -> 0 / ɛj(b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ){1,2} _ #
+ɛ -> 0 / o(b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ){1,2} _ #
+ɛ -> 0 / (ls|ns|ps|rs) _ #
+
+% when c trans. to k
+kk -> k / _
+
+% o
+o -> a / (v|m|n) _ (v|m|n)
+
+% u
+u -> a / # _ n
+u -> a / _ [b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ]#
+u -> a / _ [b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ]{2}
+u -> a / ^(b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ){1,} _ (b|s|d|f|ɡ|x|d͡ʒ|k|l|m|n|p|k|r|t|v|ks|z|t͡ɕ|ʂ|y){1,}#

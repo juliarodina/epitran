@@ -20,7 +20,7 @@ logging.disable(logging.DEBUG)
 
 class Epitran(object):
     """Unified interface for IPA transliteration/transcription"""
-    special = {'eng-Latn': FliteLexLookup,
+    special = {# 'eng-Latn': FliteLexLookup,
                'cmn-Hans': Epihan,
                'cmn-Hant': EpihanTraditional}
 

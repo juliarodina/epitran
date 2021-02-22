@@ -1,0 +1,109 @@
+% consonants = (b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z)
+% vowels = (a|e|i|o|u|y)
+
+% qu, gu as qw
+que -> q / _ #
+qu -> qw / _
+gu -> gw / _
+
+% silent k before n at the start
+k -> 0 / # _ n
+
+% c as s
+c -> s / _ (e|i|y)
+
+% ph as f
+ph -> f / _
+
+% e
+ue -> u / _
+oe -> ou / _
+
+% g
+dg -> j / _
+g -> j / _ (e|i|y|ae|oe)
+
+% h
+th -> z / _
+ph -> f / _
+gh -> 0 / _ #
+ght -> t / _
+gn -> n / _ #
+sh -> ш / _
+ch -> ч / _
+h -> 0 / # _ o
+h -> 0 / (g|x) _
+h(?!o) -> 0 / w _
+
+
+% a as ej before cons+vowels e, y
+a -> ɛй / _ (b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z){1,2}(e|y)
+
+% y
+y -> й / # _
+y -> aй / (b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z) _ #
+ey -> y / _ #
+
+% i
+ui -> uy / _
+i -> y / _ ty #
+(?<!a)i -> y / _ (a|e|i|o|u|y|ng)
+i -> y / (b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z) _ #
+i(?!(gh|gn)) -> y / ^(b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z){1,2} _ (b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z){1,2}#
+
+% o
+oo -> o / _ r #
+oo -> u / _
+ow -> ou / _
+oy -> oй / _
+
+% s as z at the end
+s -> z / ou _ #
+(?<=(b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z))ies -> yz / _ #
+'s -> z / _ #
+(?<=(a|e|i|o|u|y))s -> z / _ #
+
+% s endings
+(?<=(a|e|i|o|u|y|r))syon -> жn / _ #
+ssyon -> шn / _ #
+(?<=(l|n))syon -> шn / _ #
+(?<=(a|e|i|o|u|y))sure -> жr / _ #
+(?<=n)sure -> шr / _ #
+ssure -> шr / _ #
+(?<=(a|e|i|o|u|y))sual -> жual / _ #
+(?<=n)sual -> шual / _ #
+
+% t endings
+tyon -> шn / _ #
+ture -> чr / _ #
+
+% x
+xyon -> шn / _ #
+x -> kш / _ u
+
+% double consonants reduction
+bb -> b / _
+cc -> c / _
+dd -> d / _
+ff -> f / _
+gg -> g / _
+kk -> k / _
+ll -> l / _
+mm -> m / _
+(?<!^u)nn -> n / _
+pp -> p / _
+(?<![ove|unde])rr -> r / _
+(?<![di|mi])ss -> s / _
+tt -> t / _
+vv -> v / _
+zz -> z / _
+
+
+% u
+au -> o / _
+eu -> u / _
+ue -> u / _
+
+% w diphtongs
+aw -> o / _
+ew -> u / _

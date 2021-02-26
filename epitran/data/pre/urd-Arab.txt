@@ -1,3 +1,0 @@
-% Delete initial and final ayn
-ع -> 0 / # _
-ع -> 0 / _ #

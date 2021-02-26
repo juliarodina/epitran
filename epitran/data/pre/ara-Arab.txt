@@ -1,3 +1,0 @@
-% Initial realizations of Alif
-ا -> a / # _
-أ -> ʔa / # _

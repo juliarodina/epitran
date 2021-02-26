@@ -1,0 +1,31 @@
+from setuptools import setup
+from io import open
+
+setup(name='epitran-modified',
+      version='1.0',
+      description='Tools for transcribing languages into IPA.',
+      long_description=open('README.md', encoding='utf-8').read(),
+      long_description_content_type='text/markdown',
+      url='https://github.com/juliarodina/epitran',
+      download_url='https://github.com/juliarodina/epitran/archive/master.zip',
+      author='Julia Rodina',
+      author_email='rodina@ashmanov.net',
+      license='MIT',
+      install_requires=['setuptools',
+                        'unicodecsv',
+                        'regex',
+                        'marisa_trie'],
+      extras_require={':python_version<"3.0"': ['subprocess32']},
+      packages=['epitran'],
+      package_dir={'epitran': 'epitran'},
+      package_data={'epitran': ['data/*.txt',
+                                'data/map/*.csv',
+                                'data/pre/*.txt', 
+                                'data/post/*.txt']},
+      zip_safe=True,
+      classifiers=['Operating System :: OS Independent',
+                   'Programming Language :: Python :: 2',
+                   'Programming Language :: Python :: 3',
+                   'Topic :: Software Development :: Libraries :: Python Modules',
+                   'Topic :: Text Processing :: Linguistic']
+      )

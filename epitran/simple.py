@@ -12,9 +12,9 @@ import pkg_resources
 import regex as re
 
 import unicodecsv as csv
-from exceptions import DatafileError, MappingError
-from ligaturize import ligaturize
-from ppprocessor import PrePostProcessor
+from epitran.exceptions import DatafileError, MappingError
+from epitran.ligaturize import ligaturize
+from epitran.ppprocessor import PrePostProcessor
 
 logging.disable(logging.DEBUG)
 
